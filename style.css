@@ -1,0 +1,1127 @@
+/* ===== PASTEL PINK & GREEN THEME ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-left: 240px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff9fc;
+  color: #424941;
+  line-height: 1.7;
+}
+
+/* ===== MENU SAMPING ===== */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 35px 20px;
+  border-right: 1px solid #f6dce5;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+nav strong {
+  font-size: 21px;
+  color: #e792b1;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #626b63;
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #f9c4d6;
+  color: #ffffff;
+}
+
+/* ===== HALAMAN HOME ===== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 35px 5%;
+  min-height: 400px;
+  padding: 70px 45px;
+  background: linear-gradient(
+    135deg,
+    #f9bad0,
+    #ffe0e9
+  );
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -65px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(205, 226, 169, 0.55);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: 90px;
+  bottom: -95px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.42);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.hero span {
+  color: #658653;
+}
+
+.hero p {
+  color: #745a68;
+  font-size: 16px;
+}
+
+/* ===== TOMBOL ===== */
+
+.button {
+  display: inline-block;
+  padding: 13px 28px;
+  margin-top: 20px;
+  background: #ffffff;
+  color: #d87fa2;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px #c884a333;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #c8dda8;
+  color: #455b39;
+  transform: translateY(-4px);
+}
+
+/* ===== SECTION ===== */
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 55px 5%;
+  scroll-margin-top: 25px;
+}
+
+section h2 {
+  font-size: 30px;
+  color: #d783a4;
+  margin-bottom: 25px;
+}
+
+section h3 {
+  color: #688b60;
+}
+
+section p {
+  color: #646b66;
+}
+
+/* ===== KARTU ===== */
+
+.card-container {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #f1dce5;
+  border-radius: 23px;
+  padding: 30px;
+  box-shadow: 0 6px 22px #e8b7c523;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #b5d49c;
+  box-shadow: 0 12px 28px #d5b8c055;
+}
+
+.card h3 {
+  color: #d783a4;
+  margin-top: 0;
+}
+
+.card p {
+  color: #69716a;
+}
+
+/* Jarak judul kompetisi dan seminar */
+.card-container + h3 {
+  margin-top: 45px;
+}
+
+/* ===== CONTACT ===== */
+
+#contact {
+  background: #f0f6e8;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#contact a {
+  color: #cd739a;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #ffe3ec;
+  color: #9b6b7d;
+  font-size: 13px;
+}
+
+/* ===== RESPONSIVE HP ===== */
+
+@media (max-width: 850px) {
+  body {
+    padding-left: 0;
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  nav div {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 5px;
+  }
+
+  nav a {
+    white-space: nowrap;
+    padding: 9px 12px;
+  }
+
+  .hero {
+    margin: 20px;
+    padding: 50px 25px;
+    min-height: 320px;
+  }
+
+  section {
+    padding: 40px 6%;
+  }
+
+  #contact {
+    margin: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button, .card, nav a {
+    transition: none;
+  }
+}
+
+/* ===== POSISI PINTU FAIRY ===== */
+
+.hero {
+  position: relative;
+  padding-right: 42%;
+}
+
+.fairy-door {
+  position: absolute;
+  width: 48%;
+  max-width: 500px;
+  height: auto;
+  right: 1%;
+  bottom: 0;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding-right: 25px;
+    padding-bottom: 260px;
+  }
+
+  .fairy-door {
+    width: 230px;
+    max-width: 80%;
+    right: 5%;
+  }
+}
+
+/* ===== HOME 50:50 FAIRY LAYOUT ===== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 480px;
+  padding: 40px;
+  padding-right: 40px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bagian kiri */
+.hero-text {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: clamp(30px, 3.5vw, 52px);
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  display: block;
+}
+
+/* Bagian kanan */
+.hero-art {
+  width: 100%;
+  min-width: 0;
+  min-height: 380px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pintu fairy besar */
+.hero-art .fairy-door {
+  position: static;
+  width: 180%;
+  max-width: none;
+  height: auto;
+
+  right: auto;
+  bottom: auto;
+
+  object-fit: contain;
+  filter: drop-shadow(
+    0 12px 15px rgba(162, 111, 130, 0.12)
+  );
+}
+
+/* Tampilan HP */
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 35px 25px;
+    gap: 10px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-art {
+    min-height: 0;
+  }
+
+  .hero-art .fairy-door {
+    width: 85%;
+    max-width: 350px;
+  }
+}
+
+/* ===== FAIRY HOME 50:50 ===== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+
+  min-height: 500px;
+  padding: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+}
+
+/* BAGIAN KIRI - NAMA */
+.hero-text {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: clamp(30px, 3.5vw, 54px);
+  line-height: 1.15;
+}
+
+.hero-text h1 span {
+  display: block;
+}
+
+/* BAGIAN KANAN - PINTU */
+.hero-art {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  min-height: 0;
+  overflow: hidden;
+  display: block;
+}
+
+/* MEMPERBESAR PINTU FAIRY */
+.hero-art .fairy-door {
+  position: absolute;
+
+  width: 180%;
+  max-width: none;
+  height: auto;
+
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+
+  transform: translate(-50%, -50%);
+}
+
+/* TAMPILAN HP */
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 15px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-art {
+    height: 310px;
+  }
+
+  .hero-art .fairy-door {
+    width: 150%;
+  }
+}
+
+/* ===== PERBAIKAN PINTU FAIRY ===== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 550px;
+}
+
+.hero-art {
+  width: 100%;
+  height: 480px;
+  min-height: 0;
+  overflow: visible;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-art .fairy-door {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transform: none;
+}
+
+/* Tampilan HP */
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    height: 350px;
+  }
+}
+
+/* ============================= */
+/* FAIRY HERO SECTION */
+/* ============================= */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 540px;
+  margin: 35px 5%;
+  padding: 55px 50px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #f9cad9 0%, #fbe8ee 60%, #f5f1e8 100%);
+  border-radius: 36px;
+  box-shadow: 0 10px 28px rgba(226, 171, 190, 0.18);
+}
+
+/* background glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  top: -80px;
+  right: -60px;
+  background: rgba(210, 226, 175, 0.35);
+  filter: blur(8px);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  bottom: -70px;
+  left: -50px;
+  background: rgba(255, 255, 255, 0.4);
+  filter: blur(10px);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.hero-badge {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #bb6f8f;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.05;
+  color: #fffafc;
+  font-family: Georgia, "Times New Roman", serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.hero-text h1 span {
+  display: block;
+  color: #6f8b53;
+}
+
+.hero-desc {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #8f6074;
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #ef9db8, #e58dad);
+  color: white;
+  box-shadow: 0 8px 20px rgba(229, 141, 173, 0.28);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(229, 141, 173, 0.35);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.65);
+  color: #bc6c8f;
+  border: 1.5px solid #eab3c4;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+}
+
+.hero-note {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #9a7b88;
+  font-style: italic;
+}
+
+.hero-art {
+  position: relative;
+  z-index: 2;
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.28);
+  filter: blur(6px);
+}
+
+.fairy-door {
+  position: relative;
+  width: 82%;
+  max-width: 420px;
+  height: auto;
+  z-index: 3;
+  filter: drop-shadow(0 18px 24px rgba(166, 123, 141, 0.18));
+  transition: transform 0.35s ease;
+}
+
+.fairy-door:hover {
+  transform: scale(1.03);
+}
+
+/* sparkle */
+.sparkle {
+  position: absolute;
+  color: rgba(255,255,255,0.95);
+  font-size: 18px;
+  z-index: 1;
+  animation: twinkle 2.8s infinite ease-in-out;
+}
+
+.sparkle-1 {
+  top: 70px;
+  left: 120px;
+}
+
+.sparkle-2 {
+  top: 150px;
+  right: 360px;
+  animation-delay: 0.8s;
+}
+
+.sparkle-3 {
+  bottom: 85px;
+  left: 48%;
+  animation-delay: 1.4s;
+}
+
+/* petals */
+.petal {
+  position: absolute;
+  width: 18px;
+  height: 28px;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  background: linear-gradient(180deg, #f8bfd3, #f3a9c2);
+  opacity: 0.65;
+  z-index: 1;
+  animation: floatPetal 6s infinite ease-in-out;
+}
+
+.petal-1 {
+  top: 95px;
+  left: 55%;
+  transform: rotate(-20deg);
+}
+
+.petal-2 {
+  top: 170px;
+  left: 60%;
+  transform: rotate(18deg);
+  animation-delay: 1s;
+}
+
+.petal-3 {
+  bottom: 120px;
+  left: 70%;
+  transform: rotate(-35deg);
+  animation-delay: 2s;
+}
+
+.petal-4 {
+  bottom: 180px;
+  right: 80px;
+  transform: rotate(25deg);
+  animation-delay: 3s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes floatPetal {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 25px;
+    min-height: auto;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-art {
+    order: 2;
+    min-height: 280px;
+    margin-top: 10px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .fairy-door {
+    width: 68%;
+    max-width: 320px;
+  }
+
+  .sparkle-2,
+  .sparkle-3 {
+    display: none;
+  }
+}
+
+/* ===== MY INTRODUCTION ===== */
+
+#introduction {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 45px 5%;
+}
+
+.intro-label {
+  text-align: center;
+  color: #c47e9e;
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  gap: 0;
+
+  background: linear-gradient(
+    135deg, #fbe5ee, #f2f6e9
+  );
+
+  border-radius: 30px;
+  padding: 45px;
+  box-shadow: 0 10px 25px #e7b6c430;
+}
+
+/* FOTO */
+.intro-image {
+  width: 85%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;
+  margin: auto;
+  padding: 8px;
+
+  background: white;
+  border: 3px solid #e9b5c9;
+  border-radius: 150px 150px 25px 25px;
+  box-shadow: 0 12px 25px #d99ab530;
+  overflow: hidden;
+}
+
+.intro-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 140px 140px 18px 18px;
+}
+
+/* TEKS */
+.intro-text {
+  padding: 20px 30px;
+  min-width: 0;
+}
+
+.intro-text h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3vw, 42px);
+  color: #718b60;
+  margin-bottom: 20px;
+  border: none;
+  padding: 0;
+}
+
+.intro-text p {
+  font-size: 15px;
+  color: #756b72;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.intro-quote {
+  display: block;
+  margin-top: 22px;
+  color: #cb83a1;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 750px) {
+  .intro-container {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .intro-image {
+    width: 220px;
+  }
+
+  .intro-text {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+/* ===== FAIRY DECORATIONS ===== */
+
+/* Semua halaman */
+#introduction,
+#about,
+#education,
+#skills,
+#achievement,
+#contact {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Hiasan bunga di judul */
+#about h2::before,
+#education h2::before,
+#skills h2::before,
+#achievement h2::before,
+#contact h2::before {
+  content: "✿ ";
+  color: #e6a3bc;
+}
+
+/* Dekorasi di sudut kanan */
+#introduction::after,
+#about::after,
+#education::after,
+#skills::after,
+#achievement::after,
+#contact::after {
+  position: absolute;
+  right: 5%;
+  top: 15px;
+
+  font-size: 42px;
+  opacity: 0.28;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hiasan berbeda per halaman */
+#introduction::after {
+  content: "✧";
+  color: #dd94b2;
+}
+
+#about::after {
+  content: "❀";
+  color: #e8a2bb;
+}
+
+#education::after {
+  content: "✦";
+  color: #9cb887;
+}
+
+#skills::after {
+  content: "✧ ✦";
+  color: #e4a2c1;
+}
+
+#achievement::after {
+  content: "✿";
+  color: #b0c492;
+}
+
+#contact::after {
+  content: "♡";
+  color: #e6a3bc;
+}
+
+/* Kartu dengan sentuhan fairy */
+#education .card,
+#skills .card,
+#achievement .card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Bintang di sudut kartu */
+#education .card::after,
+#skills .card::after,
+#achievement .card::after {
+  content: "✧";
+
+  position: absolute;
+  right: 17px;
+  top: 10px;
+
+  font-size: 25px;
+  color: #dfa2ba;
+  opacity: 0.65;
+}
+
+/* Animasi saat mouse menyentuh kartu */
+#education .card:hover,
+#skills .card:hover,
+#achievement .card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 28px rgba(228, 159, 190, 0.25);
+}
+
+/* Aksesibilitas animasi */
+@media (prefers-reduced-motion: reduce) {
+  #education .card,
+  #skills .card,
+  #achievement .card {
+    transition: none;
+  }
+}
+
+/* ===== FAIRY MAGIC CURSOR ===== */
+
+/* Kursor pink */
+.fairy-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 30px;
+  height: 34px;
+
+  pointer-events: none;
+  z-index: 99999;
+}
+
+/* Sembunyikan panah biasa
+   hanya saat fairy cursor aktif */
+@media (pointer: fine) {
+  html.fairy-cursor-on,
+  html.fairy-cursor-on * {
+    cursor: none !important;
+  }
+}
+
+/* Serbuk peri */
+.fairy-dust {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+
+  color: #e49cbb;
+  font-size: 15px;
+  text-shadow: 0 0 8px #ffd5e6;
+
+  animation: dustFade 0.65s ease-out forwards;
+}
+
+/* Animasi serbuk */
+@keyframes dustFade {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-9px, -20px) scale(0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fairy-dust {
+    display: none;
+  }
+}
+
+/* ===== FAIRY DECORATION LEBIH JELAS ===== */
+
+/* Judul tiap section */
+#about h2::after {
+  content: " 🌸 ✨";
+}
+
+#education h2::after {
+  content: " 🦋 ✨";
+}
+
+#skills h2::after {
+  content: " 🌷 ✧";
+}
+
+#achievement h2::after {
+  content: " 🧚 ✨";
+}
+
+#contact h2::after {
+  content: " 💌 ✿";
+}
+
+/* Hiasan di pojok kartu */
+#education .card,
+#skills .card,
+#achievement .card {
+  position: relative;
+  overflow: hidden;
+}
+
+#education .card::after,
+#skills .card::after,
+#achievement .card::after {
+  content: "✦";
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 30px;
+  color: #d785aa;
+  opacity: 1;
+}
+
+/* Efek kartu saat disentuh mouse */
+#education .card:hover,
+#skills .card:hover,
+#achievement .card:hover {
+  background: #fff0f6;
+  border-color: #e6a1bd;
+  box-shadow: 0 12px 30px #e6a1bd55;
+}
